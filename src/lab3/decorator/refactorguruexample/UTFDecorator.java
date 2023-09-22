@@ -13,7 +13,8 @@ public class UTFDecorator extends DataSourceDecorator {
         super.writeData(encode(data));
     }
 
-    public String readData(String data) {
+    @Override
+    public String readData() {
         return decode(super.readData());
     }
 
