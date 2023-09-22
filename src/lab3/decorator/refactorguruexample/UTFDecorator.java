@@ -19,20 +19,17 @@ public class UTFDecorator extends DataSourceDecorator {
     }
 
     public String encode(String data) {
-        String utfEncoded = "";
-        byte[] utf = data.getBytes(StandardCharsets.UTF_8);
-        for (var i = 0; i < utf.length; i++)
-            utfEncoded += utf[i];
-
-        return utfEncoded;
+        byte[] strBytes = data.getBytes(StandardCharsets.UTF_8);
+        String utfEncodedString = new String(strBytes);
+        return utfEncodedString;
     }
 
     public String decode(String data) {
-        String utfEncoded = "";
-        byte[] utf = data.getBytes(StandardCharsets.UTF_8);
-        for (var i = 0; i < utf.length; i++)
-            utfEncoded += utf[i];
-
-        return new String(utfEncoded);
+//        Ambiguity about Java's default charset, so returning the same data.
+//        Java default character system - UTF_16
+//        byte[] strBytes = data.getBytes(StandardCharsets.UTF_16);
+//        String utfEncodedString = new String(strBytes);
+//        return utfEncodedString;
+        return data;
     }
 }

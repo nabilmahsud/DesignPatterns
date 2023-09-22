@@ -1,6 +1,8 @@
 package lab3.decorator.refactorguruexample;
 
 
+import java.nio.charset.StandardCharsets;
+
 public class Main {
     public static void main(String[] args) {
         String salaryRecords = "Name,Salary\nJohn Smith,100000\nSteven Jobs,912000";
@@ -9,16 +11,19 @@ public class Main {
                         new FileDataSource("out/OutputDemo.txt")));
         encoded.writeData(salaryRecords);
         DataSource plain = new FileDataSource("out/OutputDemo.txt");
-        DataSource utf = new UTFDecorator(new FileDataSource("out/OutputDemo.txt"));
+        UTFDecorator utf = new UTFDecorator(new FileDataSource("out/OutputDemo.txt"));
 
 
         utf.writeData(salaryRecords);
+        System.out.println(utf.readData());
 
+//
 //        System.out.println("- Input ----------------");
 //        System.out.println(salaryRecords);
 //        System.out.println("- Encoded --------------");
 //        System.out.println(plain.readData());
 //        System.out.println("- Decoded --------------");
 //        System.out.println(encoded.readData());
+
     }
 }
