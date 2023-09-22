@@ -1,6 +1,6 @@
 package advancejava.generics;
 
-public class List {
+public class List  {
     private int[] list = new int[10];
     private int count;
 

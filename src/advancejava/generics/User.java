@@ -1,4 +1,4 @@
 package advancejava.generics;
 
-public class User {
+public class User extends Comparable {
 }

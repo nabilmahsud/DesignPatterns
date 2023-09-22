@@ -1,6 +1,7 @@
 package advancejava.generics;
 
-public class GenericList<T> {
+
+public class GenericList<T extends Comparable> {
     private T[] list = (T[]) new Object[10];
     private int count;
 
