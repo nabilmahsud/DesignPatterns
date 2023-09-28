@@ -5,18 +5,9 @@ import lab4.chainofresponsibility.tutorialpointexample.Loggers.*;
 public class Main {
 
     private static AbstractLogger getChainOfLoggers(AbstractLogger... loggers) {
-
-        AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
-        AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
-        AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
-        AbstractLogger databaseLogger = new DatabaseLogger(AbstractLogger.WARNING);
-
-        var init = loggers[0];
-
         for (var i = 0; i < loggers.length; i++)
             if(i != loggers.length - 1)
                 loggers[i].setNextLogger(loggers[i+1]);
-
         return loggers[0];
     }
 
