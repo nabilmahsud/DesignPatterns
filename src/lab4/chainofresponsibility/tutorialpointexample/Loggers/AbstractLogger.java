@@ -1,4 +1,4 @@
-package lab4.chainofresponsibility.tutorialpointexample;
+package lab4.chainofresponsibility.tutorialpointexample.Loggers;
 
 public abstract class AbstractLogger {
     public static int INFO = 1;

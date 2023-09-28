@@ -1,4 +1,4 @@
-package lab4.chainofresponsibility.tutorialpointexample;
+package lab4.chainofresponsibility.tutorialpointexample.Loggers;
 
 public class ConsoleLogger extends AbstractLogger {
 

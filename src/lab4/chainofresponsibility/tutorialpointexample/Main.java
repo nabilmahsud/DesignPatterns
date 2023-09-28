@@ -1,5 +1,7 @@
 package lab4.chainofresponsibility.tutorialpointexample;
 
+import lab4.chainofresponsibility.tutorialpointexample.Loggers.*;
+
 public class Main {
 
     private static AbstractLogger getChainOfLoggers(AbstractLogger... loggers) {
