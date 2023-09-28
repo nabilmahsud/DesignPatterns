@@ -17,11 +17,6 @@ public class Main {
             if(i != loggers.length - 1)
                 loggers[i].setNextLogger(loggers[i+1]);
 
-
-//        errorLogger.setNextLogger(fileLogger);
-//        fileLogger.setNextLogger(consoleLogger);
-//        consoleLogger.setNextLogger(databaseLogger);
-
         return loggers[0];
     }
 
