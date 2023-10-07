@@ -1,6 +1,6 @@
 package lab5.strategy.tutorialpointsexample.HandlersAndStrategies;
 
-public abstract class OperationHandler implements Strategy {
+public abstract class OperationHandler {
     private OperationHandler next;
 
     public void setNextHandler(OperationHandler next) {
