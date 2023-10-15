@@ -1,18 +1,18 @@
 package lab6.iterator.tutorialpointexample;
 
 public class NameRepository {
-    private String names[] = new String[10];
+    private Student names[] = new Student[10];
     private int index;
 
-    public void push(String name) {
+    public void push(Student name) {
         names[index] = name;
         index++;
     }
 
-    public String pop() {
+    public Student pop() {
         index -= 1;
-        var lastName = names[index];
-        return lastName;
+        var lastStudent = names[index];
+        return lastStudent;
     }
 
 
@@ -51,7 +51,7 @@ public class NameRepository {
 
 
         @Override
-        public String current() {
+        public Student current() {
             if (isEndReached)
                return namesRespository.names[index-1];
             return namesRespository.names[index];

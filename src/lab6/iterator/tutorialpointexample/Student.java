@@ -18,6 +18,6 @@ public class Student {
     }
 
     public String getDetails() {
-        return "Reg No" + this.regNo + " Name: " + this.name + " Gender: " + this.gender + " Phone Number: " + this.phoneNumber;
+        return "Reg No: " + this.regNo + " Name: " + this.name + " Gender: " + this.gender + " Phone Number: " + this.phoneNumber;
     }
 }

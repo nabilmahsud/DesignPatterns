@@ -5,7 +5,7 @@ public interface Iterator {
     public boolean hasNext();
     public void next();
     void previous();
-    public String current();
+    public Student current();
     boolean hasPrevious();
     void moveFirst();
     void moveLast();
