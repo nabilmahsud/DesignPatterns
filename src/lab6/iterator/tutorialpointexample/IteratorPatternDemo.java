@@ -2,12 +2,33 @@ package lab6.iterator.tutorialpointexample;
 
 public class IteratorPatternDemo {
 
-    public static void main(String[] args) {
-        NameRepository namesRepository = new NameRepository();
+    public static void printStudentsWithNameStartingFromAny() {
+        var namesRepository = new NameRepository();
 
-        for (Iterator iter = namesRepository.getIterator(); iter.hasNext(); ) {
-            String name = (String) iter.next();
-            System.out.println("Name : " + name);
+        namesRepository.push("Robert");
+        namesRepository.push("John");
+        namesRepository.push("Julie");
+
+        Iterator iterator = namesRepository.getIterator();
+        
+        while(iterator.hasNext()) {
+            var name = iterator.current();
+            System.out.println(name);
+            iterator.next();
         }
+
+        while(iterator.hasPrevious()) {
+            var name = iterator.current();
+            System.out.println(name);
+            iterator.previous();
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        printStudentsWithNameStartingFromAny();
+
+
     }
 }
