@@ -1,20 +1,16 @@
 package lab7.state;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Player {
     private State state;
     private boolean playing = false;
-    private List<String> playlist = new ArrayList<>();
-    private int currentTrack = 0;
+    ITrackIterator iterator;
+    TrackDelay trackDelay;
 
-    public Player() {
-        this.state = new ReadyState(this);
+    public Player(TrackDelay trackDelay) {
+        this.trackDelay = trackDelay;
+        this.state = new ReadyState(this, trackDelay);
+        iterator = new TrackIterator(trackDelay);
         setPlaying(true);
-        for (int i = 1; i <= 12; i++) {
-            playlist.add("Track " + i);
-        }
     }
 
     public void changeState(State state) {
@@ -34,26 +30,22 @@ public class Player {
     }
 
     public String startPlayback() {
-        return "Playing " + playlist.get(currentTrack);
+        return iterator.startPlayback();
     }
 
     public String nextTrack() {
-        currentTrack++;
-        if (currentTrack > playlist.size() - 1) {
-            currentTrack = 0;
-        }
-        return "Playing " + playlist.get(currentTrack);
+      return iterator.nextTrack();
     }
 
     public String previousTrack() {
-        currentTrack--;
-        if (currentTrack < 0) {
-            currentTrack = playlist.size() - 1;
-        }
-        return "Playing " + playlist.get(currentTrack);
+       return iterator.previousTrack();
+    }
+
+    public TrackDelay getInstanceOfTrackDelay() {
+        return trackDelay;
     }
 
     public void setCurrentTrackAfterStop() {
-        this.currentTrack = 0;
+        iterator.setCurrentTrackAfterStop();
     }
 }

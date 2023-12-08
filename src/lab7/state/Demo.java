@@ -5,7 +5,8 @@ package lab7.state;
  */
 public class Demo {
     public static void main(String[] args) {
-        Player player = new Player();
+        TrackDelay trackDelay = new TrackDelay();
+        Player player = new Player(trackDelay);
         UI ui = new UI(player);
         ui.init();
     }

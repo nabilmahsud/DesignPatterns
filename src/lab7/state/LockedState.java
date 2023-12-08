@@ -6,15 +6,15 @@ package lab7.state;
  */
 public class LockedState extends State {
 
-    LockedState(Player player) {
-        super(player);
+    LockedState(Player player, TrackDelay trackDelay) {
+        super(player, trackDelay);
         player.setPlaying(false);
     }
 
     @Override
     public String onLock() {
         if (player.isPlaying()) {
-            player.changeState(new ReadyState(player));
+            player.changeState(new ReadyState(player, trackDelay));
             return "Stop playing";
         } else {
             return "Locked...";
@@ -23,7 +23,7 @@ public class LockedState extends State {
 
     @Override
     public String onPlay() {
-        player.changeState(new ReadyState(player));
+        player.changeState(new ReadyState(player, trackDelay));
         return "Ready";
     }
 
