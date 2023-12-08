@@ -8,7 +8,7 @@ public class TreeType {
     private String otherTreeData;
     private TreeSize treeSize;
     private boolean isFruit;
-    private int countOfFruits;
+    private int countOfFruitss;
 
     public TreeType(String name, Color color, String otherTreeData, TreeSize treeSize) {
         this.name = name;
