@@ -1,4 +1,4 @@
-package lab7.state;
+package lab8.state;
 
 import java.util.Timer;
 import java.util.TimerTask;

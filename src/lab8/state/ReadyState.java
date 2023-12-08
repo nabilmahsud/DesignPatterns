@@ -1,8 +1,5 @@
-package lab7.state;
+package lab8.state;
 
-
-import javax.sound.midi.Track;
-import java.util.Timer;
 
 /**
  * They can also trigger state transitions in the context.

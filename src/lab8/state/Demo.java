@@ -1,4 +1,4 @@
-package lab7.state;
+package lab8.state;
 
 /**
  * Demo class. Everything comes together here.
