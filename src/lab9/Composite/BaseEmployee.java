@@ -1,4 +1,4 @@
-package composite_tutorialspoint;
+package lab9.Composite;
 
 public abstract class BaseEmployee implements IEmployee {
     protected String name;

@@ -1,4 +1,4 @@
-package composite_tutorialspoint;
+package lab9.Composite;
 
 public class Teacher extends BaseEmployee {
     private String qualification;

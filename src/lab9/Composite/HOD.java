@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package composite_tutorialspoint;
+package lab9.Composite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author FA20-BSE-009
- */
 public class HOD extends BaseEmployee {
     private String department;
     private List<IEmployee> subordinates = new ArrayList<>();
