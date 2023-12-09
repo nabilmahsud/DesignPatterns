@@ -7,6 +7,8 @@ public class TreeType {
     private Color color;
     private String otherTreeData;
     private TreeSize treeSize;
+    private boolean isFruit;
+    private int countOfFruits;
 
     public TreeType(String name, Color color, String otherTreeData, TreeSize treeSize) {
         this.name = name;
