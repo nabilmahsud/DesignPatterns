@@ -24,6 +24,7 @@ public class Main {
         director.addEmployee(hod1);
         director.addEmployee(hod2);
 
+<<<<<<< HEAD
         employeeController = new EmployeeController(director);
         // generating organogram and bonus func in the same method
         employeeController.generateOrganogram(10);
@@ -34,6 +35,9 @@ public class Main {
 
         System.out.println("--------------------------------");
         university.notifyObservers();
+=======
+        director.giveBonusTask(10);
+>>>>>>> main
 
     }
 }
