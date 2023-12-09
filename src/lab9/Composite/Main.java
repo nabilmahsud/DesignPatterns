@@ -22,10 +22,7 @@ public class Main {
         director.addEmployee(hod1);
         director.addEmployee(hod2);
 
-        director.giveBonus(10);
-
-
-
+        director.giveBonusTask(10);
 
     }
 }
