@@ -12,5 +12,9 @@ public class DOO extends BaseEmployee {
          int bonus = (( salary / 100 ) * percentage);
          System.out.println("Hello, my name is " + name + " and I am DOO with rank" + rank + " and I got bonus: " + bonus);
     }
-    
+
+    @Override
+    public void update() {
+        System.out.println("HOD got notified!: " + name);
+    }
 }

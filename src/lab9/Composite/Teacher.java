@@ -16,4 +16,9 @@ public class Teacher extends BaseEmployee {
         int bonus = (( salary / 100 ) * percentage);
         System.out.println("Hello, my name is " + name + " and I am a teacher! and I got bonus: " + bonus);
     }
+
+    @Override
+    public void update() {
+        System.out.println("Teacher got notified!: " + name);
+    }
 }

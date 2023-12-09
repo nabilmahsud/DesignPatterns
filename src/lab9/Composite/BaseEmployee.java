@@ -1,6 +1,6 @@
 package lab9.Composite;
 
-public abstract class BaseEmployee implements IEmployee {
+public abstract class BaseEmployee implements IEmployee, Observer {
     protected String name;
     protected int salary;
     

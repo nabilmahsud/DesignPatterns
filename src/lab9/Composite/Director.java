@@ -29,5 +29,9 @@ public class Director extends BaseEmployee {
         for (IEmployee subordinate : subordinates)
             subordinate.giveBonus(percentage);
     }
-     
+
+    @Override
+    public void update() {
+        System.out.println("Director got notified!: " + name);
+    }
 }

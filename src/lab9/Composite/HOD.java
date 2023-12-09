@@ -29,5 +29,9 @@ public class HOD extends BaseEmployee {
         for (IEmployee subordinate : subordinates)
             subordinate.giveBonus(percentage);
     }
-    
+
+    @Override
+    public void update() {
+        System.out.println("HOD got notified!: " + name);
+    }
 }
