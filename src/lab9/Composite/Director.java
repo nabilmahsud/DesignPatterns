@@ -17,11 +17,14 @@ public class Director extends BaseCompositeEmployee {
         System.out.println("Hello, my name is " + name + " and I am Director! and I have " + subordinates.size()  + " subordinates and I got bonus: " + bonus);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     @Override
     public void update() {
         System.out.println("Director got notified!: " + name);
     }
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 }
