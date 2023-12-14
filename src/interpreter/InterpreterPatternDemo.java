@@ -26,15 +26,23 @@ public class InterpreterPatternDemo {
       Expression robert = new TerminalExpression("Robert");
       return new AndExpression(robert, stuart);		
    }
+      
+      public static Expression isDaughter(){
+      Expression stuart = new TerminalExpression("Mary");
+      Expression robert = new TerminalExpression("Robert");
+      return new AndExpression(robert, stuart);		
+   }
    
 
    public static void main(String[] args) {
       Expression isMale = getMaleExpression();
       Expression isMarriedWoman = getMarriedWomanExpression();
       Expression isSon = isSon();
+      Expression isDaughter = isDaughter();
 
       System.out.println("John is male? " + isMale.interpret("John"));
       System.out.println("Julie is a married women? " + isMarriedWoman.interpret("Married Julie"));
-      System.out.println("Stuart is a son of Robert? " + isSon.interpret("Stuart Mike"));
+      System.out.println("Stuart is a son of Robert? " + isSon.interpret("Stuart Robert"));
+      System.out.println("Mary is a daughter of Robert? " + isDaughter.interpret("Mary Robert"));
    }
 }
