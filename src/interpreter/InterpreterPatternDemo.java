@@ -24,7 +24,7 @@ public class InterpreterPatternDemo {
       public static Expression isSon(){
       Expression stuart = new TerminalExpression("Stuart");
       Expression robert = new TerminalExpression("Robert");
-      return new AndExpression(stuart, robert);		
+      return new AndExpression(robert, stuart);		
    }
    
 
@@ -35,6 +35,6 @@ public class InterpreterPatternDemo {
 
       System.out.println("John is male? " + isMale.interpret("John"));
       System.out.println("Julie is a married women? " + isMarriedWoman.interpret("Married Julie"));
-      System.out.println("Stuart is a son of Mike? " + isSon.interpret("Stuart Robert"));
+      System.out.println("Stuart is a son of Robert? " + isSon.interpret("Stuart Mike"));
    }
 }
